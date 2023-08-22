@@ -235,7 +235,6 @@ export default function App () {
                             <Box>
                               <ChromePicker
                                 disableAlpha
-                                width="300px"
                                 color={bgColour}
                                 onChange={handleBgChange}
                               />
@@ -282,7 +281,6 @@ export default function App () {
                                 </FormLabel>
                                 <ChromePicker
                                   disableAlpha
-                                  width="300px"
                                   color={colour}
                                   onChange={handleWidgetChange}
                                 />
@@ -305,7 +303,6 @@ export default function App () {
                                 </FormLabel>
                                 <ChromePicker
                                   disableAlpha
-                                  width="300px"
                                   color={buttonColour}
                                   onChange={handleButtonChange}
                                 />
