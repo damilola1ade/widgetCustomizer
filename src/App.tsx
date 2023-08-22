@@ -144,7 +144,7 @@ export default function App () {
         Open
       </Button>
 
-      <Modal isOpen={isOpen} size="full" onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent
           mt={0}
