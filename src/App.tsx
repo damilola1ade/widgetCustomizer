@@ -29,105 +29,105 @@ import { Screen1, Screen2, Screen3, Screen4, Screen5 } from "./components/Screen
 import Carousel from "nuka-carousel";
 import { IoIosUndo } from "react-icons/io";
 
-const App = () => {
+export default function App () {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const [slideIndex, setSlideIndex] = useState(0);
+  const [slideIndex, setSlideIndex] = useState<number>(0);
 
-  const handleButtonClick = (newSlideIndex) => {
+  const handleButtonClick = (newSlideIndex: number) => {
     setSlideIndex(newSlideIndex);
   };
 
-  const [bgColour, setBgColour] = useState("#272727");
-  const handleBgChange = (color) => {
+  const [bgColour, setBgColour] = useState<string>("#272727");
+  const handleBgChange = (color: any) => {
     setBgColour(color.hex);
   };
   const bgReset = () => {
     setBgColour("#272727");
   };
 
-  const [colour, setColour] = useState("#fff");
-  const handleWidgetChange = (color) => {
+  const [colour, setColour] = useState<string>("#fff");
+  const handleWidgetChange = (color: any) => {
     setColour(color.hex);
   };
   const widgetReset = () => {
     setColour("#fff");
   };
 
-  const [buttonColour, setButtonColour] = useState("#002c8a");
-  const handleButtonChange = (color) => {
+  const [buttonColour, setButtonColour] = useState<string>("#002c8a");
+  const handleButtonChange = (color: any) => {
     setButtonColour(color.hex);
   };
   const buttonColourReset = () => {
     setButtonColour("#002c8a");
   };
 
-  const [introMessage, setIntroMessage] = useState(
+  const [introMessage, setIntroMessage] = useState<string>(
     "Welcome to Widget Customizer"
   );
-  const handleIntroMessage = (e) => {
+  const handleIntroMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setIntroMessage(e.target.value);
   };
   const introMessageReset = () => {
     setIntroMessage("Welcome to Widget Customizer");
   };
 
-  const [secureMessage, SetSecureMessage] = useState(
+  const [secureMessage, SetSecureMessage] = useState<string>(
     "This project was made created with Typescript, Chakra UI, React color and React icons."
   );
-  const handleSecureMessage = (e) => {
+  const handleSecureMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     SetSecureMessage(e.target.value);
   };
   const secureMessageReset = () => {
     SetSecureMessage("This project was made created with Typescript, Chakra UI, React color and React icons.");
   };
 
-  const [privacyMessage, SetPrivacyMessage] = useState(
+  const [privacyMessage, SetPrivacyMessage] = useState<string>(
     "This project was made created with Typescript, Chakra UI, React color and React icons."
   );
-  const handlePrivacyMessage = (e) => {
+  const handlePrivacyMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     SetPrivacyMessage(e.target.value);
   };
   const privacyMessageReset = () => {
     SetPrivacyMessage("This project was made created with Typescript, Chakra UI, React color and React icons.");
   };
 
-  const [protectionMessage, SetProtectionMessage] = useState(
+  const [protectionMessage, SetProtectionMessage] = useState<string>(
     "This project was made created with Typescript, Chakra UI, React color and React icons."
   );
-  const handleProtectionMessage = (e) => {
+  const handleProtectionMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     SetProtectionMessage(e.target.value);
   };
   const protectionMessageReset = () => {
     SetProtectionMessage("This project was made created with Typescript, Chakra UI, React color and React icons.");
   };
 
-  const [successTitle, setSuccessTitle] = useState("Success");
-  const handleSuccessTitle = (e) => {
+  const [successTitle, setSuccessTitle] = useState<string>("Success");
+  const handleSuccessTitle = (e: any) => {
     setSuccessTitle(e.target.value);
   };
   const successTitleReset = () => {
     setSuccessTitle("Success");
   };
 
-  const [successMessage, setSuccessMessage] = useState(
+  const [successMessage, setSuccessMessage] = useState<string>(
     "Your account is connected successfully to the Matrix."
   );
-  const handleSuccessMessage = (e) => {
+  const handleSuccessMessage = (e: any) => {
     setSuccessMessage(e.target.value);
   };
   const successMessageReset = () => {
     setSuccessMessage("Your account is connected successfully to the Matrix.");
   };
 
-  const [submitButtonText, setSubmitButtonText] = useState("Continue");
-  const handleSubmitButtonText = (e) => {
+  const [submitButtonText, setSubmitButtonText] = useState<string>("Continue");
+  const handleSubmitButtonText = (e: any) => {
     setSubmitButtonText(e.target.value);
   };
   const submitButtonTextReset = () => {
     setSubmitButtonText("Continue");
   };
-  const [placeholder] = useState("Continue");
+  const [placeholder] = useState<string>("Continue");
 
   return (
     <div>
@@ -621,7 +621,6 @@ const App = () => {
                   cellSpacing={300}
                   animation="zoom"
                   slidesToShow={5}
-                  scrollMode="page"
                   className="carousel"
                   speed={900}
                   dragging={true}
@@ -630,7 +629,6 @@ const App = () => {
                   <Screen1
                     colour={colour}
                     handleWidgetChange={handleWidgetChange}
-                    bgReset={bgReset}
                     secureMessage={secureMessage}
                     handleSecureMessage={handleSecureMessage}
                     privacyMessage={privacyMessage}
@@ -640,45 +638,35 @@ const App = () => {
                     introMessage={introMessage}
                     handleIntroMessage={handleIntroMessage}
                     buttonColour={buttonColour}
-                    onChange={handleButtonChange}
+                    handleButtonChange={handleButtonChange}
                   />
                   <Screen2
                     colour={colour}
                     handleWidgetChange={handleWidgetChange}
                     buttonColour={buttonColour}
-                    onChange={handleButtonChange}
+                    handleButtonChange={handleButtonChange}
                     successTitle={successTitle}
                     handleSuccessTitle={handleSuccessTitle}
                     successMessage={successMessage}
                     handleSuccessMessage={handleSuccessMessage}
-                    placeholder={placeholder}
                     submitButtonText={submitButtonText}
                     handleSubmitButtonText={handleSubmitButtonText}
-                    onClick={() => handleButtonClick(1)}
                   />
                   <Screen3
                     buttonColour={buttonColour}
                     colour={colour}
                     handleWidgetChange={handleWidgetChange}
                     handleButtonChange={handleButtonChange}
-                    introMessage={introMessage}
-                    handleIntroMessage={handleIntroMessage}
                   />
                   <Screen4
-                    buttonColour={buttonColour}
                     colour={colour}
                     handleWidgetChange={handleWidgetChange}
-                    handleButtonChange={handleButtonChange}
-                    introMessage={introMessage}
-                    handleIntroMessage={handleIntroMessage}
                   />
                   <Screen5
                     buttonColour={buttonColour}
                     colour={colour}
                     handleWidgetChange={handleWidgetChange}
                     handleButtonChange={handleButtonChange}
-                    introMessage={introMessage}
-                    handleIntroMessage={handleIntroMessage}
                   />
                 </Carousel>
 
@@ -702,5 +690,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;

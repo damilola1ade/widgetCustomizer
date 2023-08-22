@@ -4,7 +4,6 @@ import {
   Button,
   Center,
   Flex,
-  Image,
   Text,
   Tabs,
   TabList,
@@ -18,13 +17,18 @@ import { IoLockClosed } from "react-icons/io5";
 import react from "../../assets/react.svg";
 import vite from "../../assets/vite.svg";
 
-const Screen3 = ({
+interface Screen3Props {
+  buttonColour: string;
+  colour: string;
+  handleWidgetChange: (color: string) => void;
+  handleButtonChange: (color: string) => void;
+}
+
+const Screen3:  React.FC<Screen3Props> = ({
   buttonColour,
   colour,
   handleWidgetChange,
   handleButtonChange,
-  logo,
-  handleLogo,
 }) => {
 
   return (

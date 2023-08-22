@@ -18,7 +18,22 @@ import { BsCheckCircle } from "react-icons/bs";
 import react from "../../assets/react.svg";
 import vite from "../../assets/vite.svg";
 
-const Screen2 = ({
+interface Screen2Props {
+  buttonColour: string;
+  colour: string;
+  successTitle: string,
+  successMessage: string,
+  protectionMessage: string,
+  handleSuccessTitle: (successTitle: string) => void;
+  handleSuccessMessage: (successMessage: string) => void;
+  handleSubmitButtonText: (submitButtonText: string) => void;
+  handleWidgetChange: (color: string) => void;
+  handleButtonChange: (color: string) => void;
+  submitButtonText: string;
+  handleIntroMessage: (introMessage: string) => void;
+}
+
+const Screen2:  React.FC<Screen2Props> = ({
   buttonColour,
   colour,
   handleWidgetChange,
@@ -29,8 +44,6 @@ const Screen2 = ({
   handleSuccessMessage,
   submitButtonText,
   handleSubmitButtonText,
-  logo,
-  handleLogo,
 }) => {
 
   return (

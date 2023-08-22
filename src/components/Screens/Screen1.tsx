@@ -13,7 +13,22 @@ import { SiTypescript, SiChakraui, SiReact } from "react-icons/si";
 import react from "../../assets/react.svg";
 import vite from "../../assets/vite.svg";
 
-const Screen1 = ({
+interface Screen1Props {
+  buttonColour: string;
+  colour: string;
+  secureMessage: string,
+  privacyMessage: string,
+  protectionMessage: string,
+  handleSecureMessage: (secureMessage: string) => void;
+  handlePrivacyMessage: (privacyMessage: string) => void;
+  handleProtectionMessage: (protectionMessage: string) => void;
+  handleWidgetChange: (color: string) => void;
+  handleButtonChange: (color: string) => void;
+  introMessage: string;
+  handleIntroMessage: (introMessage: string) => void;
+}
+
+const Screen1:  React.FC<Screen1Props> = ({
   buttonColour,
   colour,
   handleWidgetChange,
@@ -26,8 +41,6 @@ const Screen1 = ({
   handleProtectionMessage,
   introMessage,
   handleIntroMessage,
-  logo,
-  handleLogo,
 }) => {
   return (
     <>
