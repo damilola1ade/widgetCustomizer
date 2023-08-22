@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -8,7 +8,6 @@ import {
   Flex,
   Box,
   Button,
-  Center,
   Input,
   Stack,
   Modal,
@@ -18,7 +17,6 @@ import {
   StackDivider,
   ModalBody,
   Text,
-  Select,
   useDisclosure,
   FormControl,
   FormLabel,
@@ -29,7 +27,6 @@ import { BiArrowBack } from "react-icons/bi";
 import { ChromePicker } from "react-color";
 import { Screen1, Screen2, Screen3, Screen4, Screen5 } from "./components/Screens";
 import Carousel from "nuka-carousel";
-import { Link } from "react-router-dom";
 import { IoIosUndo } from "react-icons/io";
 
 const App = () => {
