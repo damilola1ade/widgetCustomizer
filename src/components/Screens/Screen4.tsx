@@ -1,31 +1,11 @@
-import React, { useEffect } from "react";
-import {
-  Avatar,
-  Box,
-  Button,
-  Center,
-  Flex,
-  Image,
-  Text,
-  Tabs,
-  TabList,
-  TabPanels,
-  Tab,
-  TabPanel,
-  VStack,
-  Input,
-} from "@chakra-ui/react";
-import { IoLockClosed } from "react-icons/io5";
+import { Avatar, Box, Center, Flex, Text } from "@chakra-ui/react";
 
-const Screen4 = ({
-  buttonColour,
-  colour,
-  handleWidgetChange,
-  handleButtonChange,
-  logo,
-  handleLogo,
-}) => {
+interface Screen4Props {
+  colour: string;
+  handleWidgetChange: (color: string) => void;
+}
 
+const Screen4:  React.FC<Screen4Props> = ({ colour, handleWidgetChange }) => {
   return (
     <>
       <Box
@@ -37,7 +17,7 @@ const Screen4 = ({
         position="absolute"
         margin={0}
         top={3}
-        height='95%'
+        height="95%"
       >
         <Center>
           <Flex>
@@ -45,11 +25,7 @@ const Screen4 = ({
               <Avatar size="md" />
             </Box>
             <Box ml={-3}>
-                <Avatar
-                  size="md"
-                  bg="black"
-                  color="white"
-                />
+              <Avatar size="md" bg="black" color="white" />
             </Box>
           </Flex>
         </Center>

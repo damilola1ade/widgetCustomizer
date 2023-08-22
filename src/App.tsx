@@ -65,7 +65,7 @@ export default function App () {
   const [introMessage, setIntroMessage] = useState<string>(
     "Welcome to Widget Customizer"
   );
-  const handleIntroMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleIntroMessage = (e: any) => {
     setIntroMessage(e.target.value);
   };
   const introMessageReset = () => {
@@ -75,7 +75,7 @@ export default function App () {
   const [secureMessage, SetSecureMessage] = useState<string>(
     "This project was made created with Typescript, Chakra UI, React color and React icons."
   );
-  const handleSecureMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleSecureMessage = (e: any) => {
     SetSecureMessage(e.target.value);
   };
   const secureMessageReset = () => {
@@ -85,7 +85,7 @@ export default function App () {
   const [privacyMessage, SetPrivacyMessage] = useState<string>(
     "This project was made created with Typescript, Chakra UI, React color and React icons."
   );
-  const handlePrivacyMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handlePrivacyMessage = (e: any) => {
     SetPrivacyMessage(e.target.value);
   };
   const privacyMessageReset = () => {
@@ -95,7 +95,7 @@ export default function App () {
   const [protectionMessage, SetProtectionMessage] = useState<string>(
     "This project was made created with Typescript, Chakra UI, React color and React icons."
   );
-  const handleProtectionMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleProtectionMessage = (e: any) => {
     SetProtectionMessage(e.target.value);
   };
   const protectionMessageReset = () => {
@@ -669,19 +669,6 @@ export default function App () {
                     handleButtonChange={handleButtonChange}
                   />
                 </Carousel>
-
-                {/* use this when you have 6 screens 
-                <Carousel
-                  slideIndex={slideIndex}
-                  cellAlign="center"
-                  cellSpacing={20}
-                  animation="zoom"
-                  slidesToShow={6}
-                  scrollMode="remainder"
-                  className="carousel"
-                  speed={300}
-                  dragging={true}
-                                    withoutControls={true} /> */}
               </Box>
             </Flex>
           </ModalBody>

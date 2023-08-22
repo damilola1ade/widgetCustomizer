@@ -23,14 +23,12 @@ interface Screen2Props {
   colour: string;
   successTitle: string,
   successMessage: string,
-  protectionMessage: string,
   handleSuccessTitle: (successTitle: string) => void;
   handleSuccessMessage: (successMessage: string) => void;
   handleSubmitButtonText: (submitButtonText: string) => void;
   handleWidgetChange: (color: string) => void;
   handleButtonChange: (color: string) => void;
   submitButtonText: string;
-  handleIntroMessage: (introMessage: string) => void;
 }
 
 const Screen2:  React.FC<Screen2Props> = ({

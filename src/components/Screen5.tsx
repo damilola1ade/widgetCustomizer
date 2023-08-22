@@ -1,30 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Avatar,
   Box,
-  Button,
   Center,
   Flex,
-  Image,
   Text,
-  Tabs,
-  TabList,
-  TabPanels,
-  Tab,
-  TabPanel,
-  VStack,
-  Input,
 } from "@chakra-ui/react";
-import { IoLockClosed } from "react-icons/io5";
 
-const Screen5 = ({
-  buttonColour,
+
+interface Screen5Props {
+  colour: string;
+  buttonColour: string;
+  handleWidgetChange: (color: string) => void;
+  handleButtonChange: (color: string) => void;
+}
+
+const Screen5:  React.FC<Screen5Props> = ({
   colour,
-  handleWidgetChange,
-  handleButtonChange,
-  logo,
-  handleLogo,
-}) => {
+  handleWidgetChange, }) => {
 
   return (
     <>
