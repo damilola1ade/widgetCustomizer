@@ -1,13 +1,15 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import ReactDOM from "react-dom";
+import App from './App.jsx'
 import './index.css'
 import { ChakraProvider } from '@chakra-ui/react'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider resetCss={false}>
+  <ChakraProvider cssVarsRoot={undefined}>
     <App />
     </ChakraProvider>
   </React.StrictMode>,
-)
+  document.getElementById("root")
+);
+

@@ -18,20 +18,7 @@ import { BsCheckCircle } from "react-icons/bs";
 import react from "../../assets/react.svg";
 import vite from "../../assets/vite.svg";
 
-interface Screen2Props {
-  buttonColour: string;
-  colour: string;
-  successTitle: string,
-  successMessage: string,
-  handleSuccessTitle: (successTitle: string) => void;
-  handleSuccessMessage: (successMessage: string) => void;
-  handleSubmitButtonText: (submitButtonText: string) => void;
-  handleWidgetChange: (color: string) => void;
-  handleButtonChange: (color: string) => void;
-  submitButtonText: string;
-}
-
-const Screen2:  React.FC<Screen2Props> = ({
+const Screen2 = ({
   buttonColour,
   colour,
   handleWidgetChange,

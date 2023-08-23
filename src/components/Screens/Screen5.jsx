@@ -1,11 +1,16 @@
-import { Avatar, Box, Center, Flex, Text } from "@chakra-ui/react";
+import React from "react";
+import {
+  Avatar,
+  Box,
+  Center,
+  Flex,
+  Text,
+} from "@chakra-ui/react";
 
-interface Screen4Props {
-  colour: string;
-  handleWidgetChange: (color: string) => void;
-}
+const Screen5 = ({
+  colour,
+  handleWidgetChange, }) => {
 
-const Screen4:  React.FC<Screen4Props> = ({ colour, handleWidgetChange }) => {
   return (
     <>
       <Box
@@ -17,7 +22,7 @@ const Screen4:  React.FC<Screen4Props> = ({ colour, handleWidgetChange }) => {
         position="absolute"
         margin={0}
         top={3}
-        height="95%"
+        height='95%'
       >
         <Center>
           <Flex>
@@ -25,14 +30,18 @@ const Screen4:  React.FC<Screen4Props> = ({ colour, handleWidgetChange }) => {
               <Avatar size="md" />
             </Box>
             <Box ml={-3}>
-              <Avatar size="md" bg="black" color="white" />
+                <Avatar
+                  size="md"
+                  bg="black"
+                  color="white"
+                />
             </Box>
           </Flex>
         </Center>
 
         <Center>
           <Text fontSize="md" mt={32}>
-            Screen 4
+            Screen 5
           </Text>
         </Center>
       </Box>
@@ -40,4 +49,4 @@ const Screen4:  React.FC<Screen4Props> = ({ colour, handleWidgetChange }) => {
   );
 };
 
-export default Screen4;
+export default Screen5;

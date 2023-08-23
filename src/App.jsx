@@ -32,102 +32,102 @@ import { IoIosUndo } from "react-icons/io";
 export default function App () {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const [slideIndex, setSlideIndex] = useState<number>(0);
+  const [slideIndex, setSlideIndex] = useState(0);
 
-  const handleButtonClick = (newSlideIndex: number) => {
+  const handleButtonClick = (newSlideIndex) => {
     setSlideIndex(newSlideIndex);
   };
 
-  const [bgColour, setBgColour] = useState<string>("#272727");
-  const handleBgChange = (color: any) => {
+  const [bgColour, setBgColour] = useState("#272727");
+  const handleBgChange = (color) => {
     setBgColour(color.hex);
   };
   const bgReset = () => {
     setBgColour("#272727");
   };
 
-  const [colour, setColour] = useState<string>("#fff");
-  const handleWidgetChange = (color: any) => {
+  const [colour, setColour] = useState("#fff");
+  const handleWidgetChange = (color) => {
     setColour(color.hex);
   };
   const widgetReset = () => {
     setColour("#fff");
   };
 
-  const [buttonColour, setButtonColour] = useState<string>("#002c8a");
-  const handleButtonChange = (color: any) => {
+  const [buttonColour, setButtonColour] = useState("#002c8a");
+  const handleButtonChange = (color) => {
     setButtonColour(color.hex);
   };
   const buttonColourReset = () => {
     setButtonColour("#002c8a");
   };
 
-  const [introMessage, setIntroMessage] = useState<string>(
+  const [introMessage, setIntroMessage] = useState(
     "Welcome to Widget Customizer"
   );
-  const handleIntroMessage = (e: any) => {
+  const handleIntroMessage = (e) => {
     setIntroMessage(e.target.value);
   };
   const introMessageReset = () => {
     setIntroMessage("Welcome to Widget Customizer");
   };
 
-  const [secureMessage, SetSecureMessage] = useState<string>(
+  const [secureMessage, SetSecureMessage] = useState(
     "This project was made created with Typescript, Chakra UI, React color and React icons."
   );
-  const handleSecureMessage = (e: any) => {
+  const handleSecureMessage = (e) => {
     SetSecureMessage(e.target.value);
   };
   const secureMessageReset = () => {
     SetSecureMessage("This project was made created with Typescript, Chakra UI, React color and React icons.");
   };
 
-  const [privacyMessage, SetPrivacyMessage] = useState<string>(
+  const [privacyMessage, SetPrivacyMessage] = useState(
     "This project was made created with Typescript, Chakra UI, React color and React icons."
   );
-  const handlePrivacyMessage = (e: any) => {
+  const handlePrivacyMessage = (e) => {
     SetPrivacyMessage(e.target.value);
   };
   const privacyMessageReset = () => {
     SetPrivacyMessage("This project was made created with Typescript, Chakra UI, React color and React icons.");
   };
 
-  const [protectionMessage, SetProtectionMessage] = useState<string>(
+  const [protectionMessage, SetProtectionMessage] = useState(
     "This project was made created with Typescript, Chakra UI, React color and React icons."
   );
-  const handleProtectionMessage = (e: any) => {
+  const handleProtectionMessage = (e) => {
     SetProtectionMessage(e.target.value);
   };
   const protectionMessageReset = () => {
     SetProtectionMessage("This project was made created with Typescript, Chakra UI, React color and React icons.");
   };
 
-  const [successTitle, setSuccessTitle] = useState<string>("Success");
-  const handleSuccessTitle = (e: any) => {
+  const [successTitle, setSuccessTitle] = useState("Success");
+  const handleSuccessTitle = (e) => {
     setSuccessTitle(e.target.value);
   };
   const successTitleReset = () => {
     setSuccessTitle("Success");
   };
 
-  const [successMessage, setSuccessMessage] = useState<string>(
+  const [successMessage, setSuccessMessage] = useState(
     "Your account is connected successfully to the Matrix."
   );
-  const handleSuccessMessage = (e: any) => {
+  const handleSuccessMessage = (e) => {
     setSuccessMessage(e.target.value);
   };
   const successMessageReset = () => {
     setSuccessMessage("Your account is connected successfully to the Matrix.");
   };
 
-  const [submitButtonText, setSubmitButtonText] = useState<string>("Continue");
-  const handleSubmitButtonText = (e: any) => {
+  const [submitButtonText, setSubmitButtonText] = useState("Continue");
+  const handleSubmitButtonText = (e) => {
     setSubmitButtonText(e.target.value);
   };
   const submitButtonTextReset = () => {
     setSubmitButtonText("Continue");
   };
-  const [placeholder] = useState<string>("Continue");
+  const [placeholder] = useState("Continue");
 
   return (
     <div>
@@ -144,7 +144,7 @@ export default function App () {
         Open
       </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} size='full' onClose={onClose}>
         <ModalOverlay />
         <ModalContent
           mt={0}
@@ -235,6 +235,7 @@ export default function App () {
                             <Box>
                               <ChromePicker
                                 disableAlpha
+                                width='300px'
                                 color={bgColour}
                                 onChange={handleBgChange}
                               />
@@ -281,6 +282,7 @@ export default function App () {
                                 </FormLabel>
                                 <ChromePicker
                                   disableAlpha
+                                  width='300px'
                                   color={colour}
                                   onChange={handleWidgetChange}
                                 />
@@ -303,6 +305,7 @@ export default function App () {
                                 </FormLabel>
                                 <ChromePicker
                                   disableAlpha
+                                  width='300px'
                                   color={buttonColour}
                                   onChange={handleButtonChange}
                                 />
