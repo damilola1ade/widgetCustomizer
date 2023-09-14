@@ -115,7 +115,7 @@ const Screen3 = ({
           <VStack>
             <Box>
               <Text fontSize="sm">
-                By clicking continue, you agree to Tensfer’s <br />
+                By clicking continue, you agree to Anonymous  <br />
                 <Text align="center" fontSize="sm" color="#002C8A">
                   End User Agreement
                 </Text>
